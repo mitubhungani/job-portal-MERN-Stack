@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 require('dotenv').config()
 const decodeToken = async(req, res, next) => {
 
-    const publicRoutes = ['/signup','/login']
+    const publicRoutes = ['/users/signup','/users/login']
     let url = req.url
     if(url.includes('/users/verify')){
         return next()
